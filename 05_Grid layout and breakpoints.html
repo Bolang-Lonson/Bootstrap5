@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Grid Layout and Breakpoints</title>
+</head>
+<body>
+    <div class="container-lg my-5">
+        <h2>basic grid</h2>
+        <!-- using only the col class with no marker equally spaces all children cols of the row -->
+        <div class="row">
+            <div class="col">
+                <div class="p-5 bg-primary text-light">col 1</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-primary text-light">col 2</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-primary text-light">col 3</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-primary text-light">col 4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg my-5">
+        <h2>column widths</h2>
+        <!-- max num of cols is 12 so we partition here how we please to fill up the 12 -->
+        <div class="row">
+            <div class="col-6">
+                <div class="p-5 bg-primary text-light">col 1</div>
+            </div>
+            <div class="col-3">
+                <div class="p-5 bg-primary text-light">col 2</div>
+            </div>
+            <div class="col-3">
+                <div class="p-5 bg-primary text-light">col 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg my-5">
+        <h2>responsive column widths</h2>
+        <!-- on screens less than sm, cols are equally spaced at 4 till the screen reaches sm and greater -->
+        <div class="row">
+            <div class="col-sm-4 col-lg-6">
+                <div class="p-5 bg-primary text-light">col 1</div>
+            </div>
+            <div class="col-sm-4 col-lg-3">
+                <div class="p-5 bg-primary text-light">col 2</div>
+            </div>
+            <div class="col-sm-4 col-lg-3">
+                <div class="p-5 bg-primary text-light">col 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg my-5">
+        <h2>justifying columns</h2>
+        <!-- cols will have fixed widths of 3 at screen size medium and above. for less than medium cols will all take up 12 -->
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="p-5 bg-primary text-light">col 1</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-5 bg-primary text-light">col 2</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-5 bg-primary text-light">col 3</div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
