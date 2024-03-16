@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./font/bootstrap-icons.css">
+    <style>
+        #root {
+            position: relative;
+            height: 100dvh;
+        }
+
+        #root::before {
+            content: '';
+            background-image: url('./Assets/BG2.jpg');
+            background-size: inherit;
+            background-repeat: repeat;
+            /* background-position: center center; */
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            filter: blur(2px);
+            z-index: -1;
+        }
+        #form-section {
+            height: 100;
+        }
+        #rem-check:checked {
+            background-color: black;
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+    <div class="px-0 g-0" id="root">
+        <div class="row justify-content-end align-items-center h-100 px-0" id="form-section">
+            <div class="col-md-6 col-lg-5 bg-light h-100 shadow py-5">
+                <div class="container pt-5">
+                    <div class="text-center my-5">
+                        <img src="./Assets/logo-char.png" alt="logo" class="img-fluid">
+                        </div>
+                    <div class="row my-5 justify-content-center">
+                        <div class="col-md-9 col-10">
+                            <form>
+                                <label for="email" class="form-label ">Email Address</label>
+                                <input type="email" class="form-control mb-4 " id="email" placeholder="e.g john@example.com">
+                                <label for="pass" class="form-label ">Password</label>
+                                <input type="password" class="form-control mb-4" id="pass" placeholder="********">
+                                <div class="form-check mb-3">
+                                    <label for="rem-check" class="form-check-label">Remember me</label>
+                                    <input type="checkbox" class="form-check-input" id="rem-check">
+                                </div>
+                                <button class="btn btn-dark w-100 mb-4" type="submit">Login</button>
+                                <a href="/pass-recovery">Forgot your password?</a>
+                                <div class="mt-2"><a href="/signup">Signup</a></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-muted mt-5 pt-5"><i class="bi bi-c-circle"></i> Xertia Inc 2024</div>
+            </div>
+        </div>
+    </div>
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+</html>
