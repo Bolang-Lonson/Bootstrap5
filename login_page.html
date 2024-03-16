@@ -6,17 +6,11 @@
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./font/bootstrap-icons.css">
     <style>
-        #root {
-            position: relative;
-            height: 100dvh;
-        }
-
         #root::before {
             content: '';
             background-image: url('./Assets/BG2.jpg');
-            background-size: inherit;
+            background-size: contain;
             background-repeat: repeat;
-            /* background-position: center center; */
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
@@ -24,7 +18,11 @@
             z-index: -1;
         }
         #form-section {
-            height: 100;
+            height: 100dvh;
+            /* height: 200vh; */
+        }
+        #form-box {
+            overflow: auto;
         }
         #rem-check:checked {
             background-color: black;
@@ -33,19 +31,19 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="px-0 g-0" id="root">
-        <div class="row justify-content-end align-items-center h-100 px-0" id="form-section">
-            <div class="col-md-6 col-lg-5 bg-light h-100 shadow py-5">
+    <div class="p-0 g-0 m-0" id="root">
+        <div class="row justify-content-end align-items-center p-0 m-0" id="form-section">
+            <div class="col-md-6 col-lg-4 bg-light h-100 position-relative  shadow px-0 m-0" id="form-box">
                 <div class="container pt-5">
-                    <div class="text-center my-5">
+                    <div class="text-center my-3">
                         <img src="./Assets/logo-char.png" alt="logo" class="img-fluid">
                         </div>
                     <div class="row my-5 justify-content-center">
                         <div class="col-md-9 col-10">
-                            <form>
-                                <label for="email" class="form-label ">Email Address</label>
+                            <form method="POST">
+                                <label for="email" class="form-label border-start border-black border-3 ps-2 mb-3">Email Address</label>
                                 <input type="email" class="form-control mb-4 " id="email" placeholder="e.g john@example.com">
-                                <label for="pass" class="form-label ">Password</label>
+                                <label for="pass" class="form-label border-start border-black border-3 ps-2 mb-3">Password</label>
                                 <input type="password" class="form-control mb-4" id="pass" placeholder="********">
                                 <div class="form-check mb-3">
                                     <label for="rem-check" class="form-check-label">Remember me</label>
@@ -58,7 +56,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center text-muted mt-5 pt-5"><i class="bi bi-c-circle"></i> Xertia Inc 2024</div>
+                <div class="text-center text-muted w-100 my-5 pt-5">
+                    <i class="bi bi-c-circle"></i> Lodged Co. 2024
+                </div>
             </div>
         </div>
     </div>
